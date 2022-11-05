@@ -1,0 +1,147 @@
+Started GET "/" for 172.18.0.1 at 2022-11-05 16:11:40 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.1ms | Allocations: 635)
+Completed 200 OK in 108ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 4949)
+
+
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('8304327681930009975', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRecipes (20221105071722)
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE `recipes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `url` varchar(255), `food_image_url` varchar(255), `material` varchar(255), `cost` varchar(255), `indication` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221105071722')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-11-05 07:19:36.570960', '2022-11-05 07:19:36.570960')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8304327681930009975')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:28:50 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/recipes"):
+  
+Started GET "/favicon.ico" for 172.18.0.1 at 2022-11-05 16:28:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:30:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/recipes"):
+  
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:30:47 +0900
+  
+NameError (undefined local variable or method `root_path' for #<ActionDispatch::Routing::Mapper:0x0000ffff6756b528 @set=#<ActionDispatch::Routing::RouteSet:0x0000ffff8596fc78>, @draw_paths=[#<Pathname:/app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x0000ffff6756b4d8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000ffff85296b68 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  get root_path => 'recipes#index'
+      ^^^^^^^^^):
+  
+config/routes.rb:6:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:31:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/recipes"):
+  
+Started GET "/" for 172.18.0.1 at 2022-11-05 16:31:33 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 146)
+
+
+Started GET "/" for 172.18.0.1 at 2022-11-05 16:31:39 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:31:45 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 98)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:31:46 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 29)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:31:55 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 98)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:33:04 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 18ms (ActiveRecord: 0.0ms | Allocations: 2206)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:33:07 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 45)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:33:08 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:33:09 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-05 16:33:10 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 31)
+
+
+Started GET "/" for 172.18.0.1 at 2022-11-05 16:33:42 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.4ms | Allocations: 523)
+Completed 200 OK in 70ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 3553)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT GET_LOCK('8304327681930009975', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePosts (20221105073432)
+  [1m[35m (27.4ms)[0m  [1m[35mCREATE TABLE `posts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20221105073432')[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8304327681930009975')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (2.8ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `url`, `food_image_url`, `material`, `cost`, `indication`, `created_at`, `updated_at`) VALUES ('デパ地下風かぼちゃサラダ', 'https://recipe.rakuten.co.jp/recipe/1750074197/', 'https://image.space.rakuten.co.jp/d/strg/ctrl/3/84ee56cf01c8c1a6196dcf3ee2ca62da3d5d0fd3.10.2.3.2.jpg', '[\"かぼちゃ\", \"玉ねぎ\", \"ベーコン\", \"●マヨネーズ\", \"●粒マスタード\", \"●砂糖\", \"●塩\", \"●粗挽きこしょう\"]', '300円前後', '約15分', '2022-11-05 07:36:04.068505', '2022-11-05 07:36:04.068505')[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (1.0ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `url`, `food_image_url`, `material`, `cost`, `indication`, `created_at`, `updated_at`) VALUES ('超→簡単❤キャベツのツナサラダ～', 'https://recipe.rakuten.co.jp/recipe/1540000496/', 'https://image.space.rakuten.co.jp/d/strg/ctrl/3/95e9d9a657bd6807f218da47601c62c8e8f55d1f.14.1.3.2.jpg', '[\"キャベツ\", \"きゅうり\", \"ツナ缶（今回はツナコーン缶）\", \"塩・コショウ\", \"マヨネーズ\", \"酢\"]', '300円前後', '約15分', '2022-11-05 07:36:04.077585', '2022-11-05 07:36:04.077585')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('Next.js + Ruby on Rails + Docker の環境構築', '2022-11-05 07:36:04.100596', '2022-11-05 07:36:04.100596')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('React Hooks でカスタムフックを作る', '2022-11-05 07:36:04.106192', '2022-11-05 07:36:04.106192')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('GraphQL と Apollo Client 入門', '2022-11-05 07:36:04.112605', '2022-11-05 07:36:04.112605')[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('【TypeScript4.3】Template Literal Types', '2022-11-05 07:36:04.119844', '2022-11-05 07:36:04.119844')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('Tailwind CSS でダークモード実装', '2022-11-05 07:36:04.124017', '2022-11-05 07:36:04.124017')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/posts" for 172.18.0.1 at 2022-11-05 16:37:02 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 12.7ms | ActiveRecord: 4.7ms | Allocations: 8296)
+
+
