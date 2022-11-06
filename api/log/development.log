@@ -153,3 +153,83 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 52ms (Views: 14.0ms | ActiveRecord: 10.2ms | Allocations: 8302)
 
 
+Started GET "/posts" for 172.18.0.1 at 2022-11-06 10:27:05 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 3.3ms | Allocations: 1335)
+
+
+Started GET "/posts" for 172.18.0.1 at 2022-11-06 10:50:14 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 2.6ms | Allocations: 1098)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-06 18:30:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 17ms (ActiveRecord: 0.0ms | Allocations: 2207)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-06 18:31:03 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 102)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (6.7ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `url`, `food_image_url`, `material`, `cost`, `indication`, `created_at`, `updated_at`) VALUES ('デパ地下風かぼちゃサラダ', 'https://recipe.rakuten.co.jp/recipe/1750074197/', 'https://image.space.rakuten.co.jp/d/strg/ctrl/3/84ee56cf01c8c1a6196dcf3ee2ca62da3d5d0fd3.10.2.3.2.jpg', '[\"かぼちゃ\", \"玉ねぎ\", \"ベーコン\", \"●マヨネーズ\", \"●粒マスタード\", \"●砂糖\", \"●塩\", \"●粗挽きこしょう\"]', '300円前後', '約15分', '2022-11-06 09:31:55.440659', '2022-11-06 09:31:55.440659')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.7ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `url`, `food_image_url`, `material`, `cost`, `indication`, `created_at`, `updated_at`) VALUES ('超→簡単❤キャベツのツナサラダ～', 'https://recipe.rakuten.co.jp/recipe/1540000496/', 'https://image.space.rakuten.co.jp/d/strg/ctrl/3/95e9d9a657bd6807f218da47601c62c8e8f55d1f.14.1.3.2.jpg', '[\"キャベツ\", \"きゅうり\", \"ツナ缶（今回はツナコーン缶）\", \"塩・コショウ\", \"マヨネーズ\", \"酢\"]', '300円前後', '約15分', '2022-11-06 09:31:55.455365', '2022-11-06 09:31:55.455365')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('Next.js + Ruby on Rails + Docker の環境構築', '2022-11-06 09:31:55.474856', '2022-11-06 09:31:55.474856')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('React Hooks でカスタムフックを作る', '2022-11-06 09:31:55.480161', '2022-11-06 09:31:55.480161')[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('GraphQL と Apollo Client 入門', '2022-11-06 09:31:55.485959', '2022-11-06 09:31:55.485959')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('【TypeScript4.3】Template Literal Types', '2022-11-06 09:31:55.490864', '2022-11-06 09:31:55.490864')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO `posts` (`title`, `created_at`, `updated_at`) VALUES ('Tailwind CSS でダークモード実装', '2022-11-06 09:31:55.495192', '2022-11-06 09:31:55.495192')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('8304327681930009975', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('8304327681930009975')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/posts" for 172.18.0.1 at 2022-11-06 18:34:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 13.7ms | ActiveRecord: 4.6ms | Allocations: 8680)
+
+
+Started GET "/posts" for 172.18.0.1 at 2022-11-06 18:34:04 +0900
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.6ms | Allocations: 1573)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-06 18:34:18 +0900
+Processing by RecipesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-06 18:34:27 +0900
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.8ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 14.1ms | ActiveRecord: 5.2ms | Allocations: 6273)
+
+
