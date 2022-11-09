@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # delete 'posts/:id' => 'posts#destroy'
   
   get 'recipes' => 'recipes#index'
+  post 'recipes' => 'recipes#create'
 
 end

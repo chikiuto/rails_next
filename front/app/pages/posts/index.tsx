@@ -25,7 +25,7 @@ const Home: FC<Props> = (props) => {
 		</thead>
 		<tbody>
 			{props.posts.map((post) =>
-			<tr>
+			<tr key={post.id}>
 				<td>{post.id}.</td>
 				<td>{post.title}</td>
 			</tr>
