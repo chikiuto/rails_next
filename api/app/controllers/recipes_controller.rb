@@ -5,14 +5,14 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@recipe = Recipe.create(title: params["title"]
-      # title: "aewfiuh",
-			# url: "tetaew"
-			# food_image_url: "aeiuwfh"
-			# material: "epiuawrth"
-			# cost: "bvyhrap"
-			# indication: "h@alkewafm"
-    )
+		@recipe = Recipe.create(
+          title: params["title"],
+          url: params["url"],
+          food_image_url: params["food_image_url"],
+          material: params["material"],
+      		cost: params["cost"],
+          indication: params["indication"]
+      )
 
 		render json: @recipe
 	end
