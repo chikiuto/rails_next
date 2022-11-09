@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 
 type Recipe = {
   id: number;
@@ -30,8 +30,8 @@ const Home: FC<Props> = (props) => {
           <th>image</th>
         </tr>
       </thead>
-      <tbody>
         {props.recipes.map((recipe) =>
+      <tbody key={recipe.id}>
         <tr>
           <td>{recipe.id}.</td>
           <td>{recipe.title}</td>
@@ -41,14 +41,14 @@ const Home: FC<Props> = (props) => {
           <td><img src={recipe.food_image_url} alt="food_img" style={{height: '120px'}}/>
           <br /><a href={recipe.url}>つくる</a></td>
         </tr>
-        )}
       </tbody>
+        )}
     </table>
 	</div>
   )
 }
 
-export const getServerSideProps: GetStaticProps = async context => {
+export const getServerSideProps: GetServerSideProps = async context => {
   const response = await fetch("http://api:3000/recipes", {method: "GET"});
   const json = await response.json();
 

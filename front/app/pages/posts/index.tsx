@@ -25,7 +25,7 @@ const Home: FC<Props> = (props) => {
 		</thead>
 		<tbody>
 			{props.posts.map((post) =>
-			<tr>
+			<tr key={post.id}>
 				<td>{post.id}.</td>
 				<td>{post.title}</td>
 			</tr>
@@ -37,23 +37,15 @@ const Home: FC<Props> = (props) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-	try {
+	console.log(context)
 	const response = await fetch("http://api:3000/posts", {method: "GET"});
-  	const json = await response.json();
+	const json = await response.json();
 
 	return {
 		props: {
 		posts: json
 		},
 	};
-  } catch (e) {
-	console.log(e)
-        return {
-            props: {
-                products: [],
-            }
-
-  		}
-	}
 }
+
 export default Home;
