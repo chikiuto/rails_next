@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
           url: params["url"],
           food_image_url: params["food_image_url"],
           material: params["material"],
-      		cost: params["cost"],
+      	  cost: params["cost"],
           indication: params["indication"]
       )
 

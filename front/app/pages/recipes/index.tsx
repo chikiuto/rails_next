@@ -23,10 +23,10 @@ const Home: FC<Props> = (props) => {
       <thead>
         <tr>
           <th>id</th>
-          <th>recipeTitle</th>
-          <th>recipeIndication</th>
-          <th>recipeCost</th>
-          <th>recipeMaterial</th>
+          <th>Title</th>
+          <th>Indication</th>
+          <th>Cost</th>
+          <th>Material</th>
           <th>image</th>
         </tr>
       </thead>
@@ -37,7 +37,8 @@ const Home: FC<Props> = (props) => {
           <td>{recipe.title}</td>
           <td>{recipe.indication}</td>
           <td>{recipe.cost}</td>
-          <td>{recipe.material.replace(/"|\]|\[/g,'')}</td>
+          <td>{recipe.material}</td>
+          {/* <td>{recipe.material.replace(/"|\]|\[/g,'')}</td> */}
           <td><img src={recipe.food_image_url} alt="food_img" style={{height: '120px'}}/>
           <br /><a href={recipe.url}>つくる</a></td>
         </tr>

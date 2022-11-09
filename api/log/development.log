@@ -2529,3 +2529,105 @@ Completed 200 OK in 61ms (Views: 21.3ms | ActiveRecord: 11.2ms | Allocations: 93
 Completed 200 OK in 73ms (Views: 21.3ms | ActiveRecord: 12.1ms | Allocations: 10476)
 
 
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:19:21 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (7.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 16.8ms | ActiveRecord: 11.1ms | Allocations: 8131)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:19:25 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (10.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 31.9ms | ActiveRecord: 10.9ms | Allocations: 3093)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:19:30 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (12.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 39.7ms | ActiveRecord: 12.4ms | Allocations: 3076)
+
+
+Started GET "/recipes" for 172.18.0.1 at 2022-11-09 20:20:25 +0900
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (4.5ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 7.5ms | ActiveRecord: 9.6ms | Allocations: 6458)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:20:38 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.3ms | Allocations: 3082)
+
+
+Started GET "/posts" for 172.18.0.3 at 2022-11-09 20:21:06 +0900
+Processing by PostsController#index as */*
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/controllers/posts_controller.rb:7:in `index'
+Completed 200 OK in 24ms (Views: 10.1ms | ActiveRecord: 7.0ms | Allocations: 3419)
+
+
+Started POST "/create" for 172.18.0.1 at 2022-11-09 20:22:31 +0900
+Processing by RecipesController#create as */*
+  Parameters: {"title"=>"aefdsfeawfaewdferfd", "url"=>"aewfddasytergsfdz", "food_image_url"=>"DFcfrexindications", "material"=>"SDECF", "cost"=>"aefreawf", "indication"=>"aewdfa"}
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:8:in `create'
+  [1m[36mRecipe Create (10.2ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `url`, `food_image_url`, `material`, `cost`, `indication`, `created_at`, `updated_at`) VALUES ('aefdsfeawfaewdferfd', 'aewfddasytergsfdz', 'DFcfrexindications', 'SDECF', 'aefreawf', 'aewdfa', '2022-11-09 11:22:32.016107', '2022-11-09 11:22:32.016107')[0m
+  ↳ app/controllers/recipes_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:8:in `create'
+Completed 200 OK in 65ms (Views: 0.8ms | ActiveRecord: 19.2ms | Allocations: 2779)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:23:15 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (3.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 3.9ms | Allocations: 3229)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:23:25 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (11.1ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 11.1ms | Allocations: 3198)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:24:53 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (3.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 3.4ms | Allocations: 3198)
+
+
+Started GET "/recipes" for 172.18.0.3 at 2022-11-09 20:25:57 +0900
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (16.8ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/controllers/recipes_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 11.0ms | ActiveRecord: 16.8ms | Allocations: 3198)
+
+
+Started POST "/create" for 172.18.0.1 at 2022-11-09 20:30:11 +0900
+Processing by RecipesController#create as */*
+  Parameters: {"title"=>"aefdsfeawfaewdferfd", "url"=>"aewfddasytergsfdz", "food_image_url"=>"DFcfrexindications", "material"=>"SDECF", "cost"=>"aefreawf", "indication"=>"aewdfa"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/recipes_controller.rb:8:in `create'
+  [1m[36mRecipe Create (3.1ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `url`, `food_image_url`, `material`, `cost`, `indication`, `created_at`, `updated_at`) VALUES ('aefdsfeawfaewdferfd', 'aewfddasytergsfdz', 'DFcfrexindications', 'SDECF', 'aefreawf', 'aewdfa', '2022-11-09 11:30:11.581232', '2022-11-09 11:30:11.581232')[0m
+  ↳ app/controllers/recipes_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/recipes_controller.rb:8:in `create'
+Completed 200 OK in 53ms (Views: 0.8ms | ActiveRecord: 6.9ms | Allocations: 2018)
+
+
+Started OPTIONS "/create" for 172.18.0.1 at 2022-11-09 20:30:32 +0900
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/create"):
+  
+Started OPTIONS "/create" for 172.18.0.1 at 2022-11-09 20:31:20 +0900
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/create"):
+  
