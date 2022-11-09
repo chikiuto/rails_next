@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
-
     render json: @posts
   end
 
@@ -13,17 +12,24 @@ class PostsController < ApplicationController
     render json: @post
   end
 
+
+
   # POST /posts
   def create
-    @post = Post.new(post_params)
+
+    # @post = Post.new(post_params)
+    # json_request = JSON.parse(request.body.read)
+    @post = Post.new(title: params["title"])
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post
     else
       render json: @post.errors, status: :unprocessable_entity
     end
   end
 
+
+  
   # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
