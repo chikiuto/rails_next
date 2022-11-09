@@ -1,15 +1,6 @@
-// type Props = {
-//   onClick: (event: React.MouseEvent<HTMLInputElement>) => void
-//   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-//   onkeypress: (event: React.KeyboardEvent<HTMLInputElement>) => void
-//   onBlur: (event: React.FocusEvent<HTMLInputElement>) => void
-//   onFocus: (event: React.FocusEvent<HTMLInputElement>) => void
-//   onSubmit: (event: React.FormEvent<HTMLFormElement>) => void
-//   onClickDiv: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
-// }
 
 export default function PageWithJSbasedForm() {
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
 
     const data = {
@@ -19,7 +10,7 @@ export default function PageWithJSbasedForm() {
     const JSONdata = JSON.stringify(data);
     console.log(JSONdata);
 
-    const endpoint = '/recipes';
+    // const endpoint = 'http://api:3000/create';
 
     // const options = {
     //   method: 'POST',
@@ -30,14 +21,13 @@ export default function PageWithJSbasedForm() {
     //   body: JSONdata
     // };
 
-    const response = await fetch( endpoint, {
-      method: 'POST',
-      mode: 'cors',
+    const response = await fetch( 'http://api:3000/create', {
+      method: 'post',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSONdata
-    }).then(response => {
+     } ).then(response => {
       if (!response.ok) {
         console.error('response.ok:', response.ok);
         console.error('response.status:', response.status);

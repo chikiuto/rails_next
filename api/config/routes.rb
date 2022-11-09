@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # patch 'posts/:id'  => 'posts#update'
   # delete 'posts/:id' => 'posts#destroy'
   
-  get 'recipes' => 'recipes#index'
-  post 'recipes' => 'recipes#create'
+  get '/recipes' => 'recipes#index'
+  post '/create' => 'recipes#create'
 
 end
