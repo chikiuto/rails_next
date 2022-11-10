@@ -5,6 +5,8 @@ class RecipesController < ApplicationController
 	end
 
 	def create
+    json_request = JSON.parse(request.body.read)
+
 		@recipe = Recipe.create(
           title: params["title"],
           url: params["url"],
@@ -14,6 +16,7 @@ class RecipesController < ApplicationController
           indication: params["indication"]
       )
 
-		render json: @recipe
+		render json: json_request
+		# render json: @recipe
 	end
 end
