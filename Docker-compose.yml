@@ -27,15 +27,15 @@ services:
       - ./api:/app
     command: rails server -b 0.0.0.0
 
-  front: 
-    build:
-      context: ./front/
-      dockerfile: Dockerfile
-    volumes:
-      - ./front/app:/usr/src/app
-    command: 'yarn dev'
-    ports:
-      - "8000:3000"
+  # front: 
+  #   build:
+  #     context: ./front/
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./front/app:/usr/src/app
+  #   command: 'yarn dev'
+  #   ports:
+  #     - "8000:3000"
 volumes:
   mysql-db:
     driver: local

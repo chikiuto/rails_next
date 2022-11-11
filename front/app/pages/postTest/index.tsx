@@ -1,3 +1,5 @@
+import axios from "axios"
+
 export default function PageWithJSbasedForm() {
     // Handles the submit event on form submit.
     const handleSubmit = async (event: any) => {
@@ -15,7 +17,6 @@ export default function PageWithJSbasedForm() {
   
       // API endpoint where we send form data.
       const endpoint = 'http://0.0.0.0:3000/create'
-  
       // Form the request for sending data to the server.
       const options = {
         // The method is POST because we are sending data.
@@ -29,14 +30,18 @@ export default function PageWithJSbasedForm() {
           'Content-Type': 'application/json',
         },
         // Body of the request is the JSON data we created above.
-        body: JSON.stringify({ "title": "kkkkkkkk" }) ,
+        // body: JSON.stringify({ "title": "kkkkkkkk" }) ,
+        body: { "title": "kkkkkkkk" } ,
         // body: JSONdata,
       }
-  
       // Send the form data to our forms API on Vercel and get a response.
-      const response = await fetch(endpoint, options)
-      console.log(options)
+      // const response = await fetch(endpoint, options)
+      // console.log(options)
+
+
+      const response = axios.post('http://0.0.0.0:3000/create', {title:'jjjjjjj'})
   
+
       // Get the response data from server as JSON.
       // If server returns the name submitted, that means the form works.
       const result = await response
