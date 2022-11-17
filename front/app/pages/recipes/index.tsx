@@ -22,7 +22,6 @@ const Home: FC<Props> = (props) => {
     <table className="dataframe table table-bordered table-hover">
       <thead>
         <tr>
-          <th>id</th>
           <th>Title</th>
           <th>Indication</th>
           <th>Cost</th>
@@ -33,7 +32,6 @@ const Home: FC<Props> = (props) => {
         {props.recipes.map((recipe) =>
       <tbody key={recipe.id}>
         <tr>
-          <td>{recipe.id}.</td>
           <td>{recipe.title}</td>
           <td>{recipe.indication}</td>
           <td>{recipe.cost}</td>
@@ -50,7 +48,7 @@ const Home: FC<Props> = (props) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const response = await fetch("http://api:3000/recipes", {method: "GET"});
+  const response = await fetch("http://0.0.0.0:3000/recipes", {method: "GET"});
   const json = await response.json();
 
   return {
