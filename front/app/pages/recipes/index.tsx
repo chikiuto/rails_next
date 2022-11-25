@@ -42,6 +42,7 @@ const Home: FC<Props> = (props) => {
         </tr>
       </tbody>
         )}
+        
     </table>
 	</div>
   )
