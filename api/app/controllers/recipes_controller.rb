@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
           material: params["material"],
       	  cost: params["cost"],
           indication: params["indication"]
-      )
+      	)
 		render json: @recipe
 	end
 end
